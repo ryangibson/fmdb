@@ -32,11 +32,15 @@
     return FMDBReturnAutoreleased(rs);
 }
 
+
 #if ! __has_feature(objc_arc)
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-implementations"
 - (void)finalize {
     [self close];
     [super finalize];
 }
+#pragma clang diagnostic pop
 #endif
 
 - (void)dealloc {
