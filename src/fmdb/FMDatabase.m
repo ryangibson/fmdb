@@ -75,10 +75,13 @@ NS_ASSUME_NONNULL_END
 }
 
 #if ! __has_feature(objc_arc)
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-implementations"
 - (void)finalize {
     [self close];
     [super finalize];
 }
+#pragma clang diagnostic pop
 #endif
 
 - (void)dealloc {
@@ -1636,10 +1639,13 @@ void FMDBBlockSQLiteCallBackFunction(sqlite3_context *context, int argc, sqlite3
 @implementation FMStatement
 
 #if ! __has_feature(objc_arc)
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-implementations"
 - (void)finalize {
     [self close];
     [super finalize];
 }
+#pragma clang diagnostic pop
 #endif
 
 - (void)dealloc {
