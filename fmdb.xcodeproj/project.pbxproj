@@ -41,6 +41,22 @@
 		621721B51892BFE30006691F /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CC50F2CB0DF9183600E4AAAE /* FMDatabaseAdditions.m */; };
 		621721B61892BFE30006691F /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9E4EB813B31188005F9210 /* FMDatabasePool.m */; };
 		6290CBB7188FE836009790F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6290CBB6188FE836009790F8 /* Foundation.framework */; };
+		7487739B2199E57700AC47FE /* module.modulemap in Headers */ = {isa = PBXBuildFile; fileRef = 7487739A2199E4CD00AC47FE /* module.modulemap */; settings = {ATTRIBUTES = (Public, ); }; };
+		7487739C2199E58900AC47FE /* module.modulemap in Headers */ = {isa = PBXBuildFile; fileRef = 7487739A2199E4CD00AC47FE /* module.modulemap */; settings = {ATTRIBUTES = (Public, ); }; };
+		74F1E38F219980B600DB1877 /* FMDatabase+InMemoryOnDiskIO.h in Headers */ = {isa = PBXBuildFile; fileRef = CC7CE42618F5C04600938264 /* FMDatabase+InMemoryOnDiskIO.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		74F1E390219980B700DB1877 /* FMDatabase+InMemoryOnDiskIO.h in Headers */ = {isa = PBXBuildFile; fileRef = CC7CE42618F5C04600938264 /* FMDatabase+InMemoryOnDiskIO.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		74F1E391219980BE00DB1877 /* FMDatabase+InMemoryOnDiskIO.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7CE42718F5C04600938264 /* FMDatabase+InMemoryOnDiskIO.m */; };
+		74F1E392219980BF00DB1877 /* FMDatabase+InMemoryOnDiskIO.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7CE42718F5C04600938264 /* FMDatabase+InMemoryOnDiskIO.m */; };
+		74F1E393219980C300DB1877 /* FMDatabase+FTS3.h in Headers */ = {isa = PBXBuildFile; fileRef = CCA66A2819C0CB1900EFDAC1 /* FMDatabase+FTS3.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		74F1E394219980C300DB1877 /* FMDatabase+FTS3.h in Headers */ = {isa = PBXBuildFile; fileRef = CCA66A2819C0CB1900EFDAC1 /* FMDatabase+FTS3.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		74F1E395219980CA00DB1877 /* FMDatabase+FTS3.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA66A2919C0CB1900EFDAC1 /* FMDatabase+FTS3.m */; };
+		74F1E396219980CB00DB1877 /* FMDatabase+FTS3.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA66A2919C0CB1900EFDAC1 /* FMDatabase+FTS3.m */; };
+		74F1E397219980D000DB1877 /* FMTokenizers.h in Headers */ = {isa = PBXBuildFile; fileRef = CCA66A2A19C0CB1900EFDAC1 /* FMTokenizers.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		74F1E398219980D000DB1877 /* FMTokenizers.h in Headers */ = {isa = PBXBuildFile; fileRef = CCA66A2A19C0CB1900EFDAC1 /* FMTokenizers.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		74F1E399219980D700DB1877 /* FMTokenizers.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA66A2B19C0CB1900EFDAC1 /* FMTokenizers.m */; };
+		74F1E39A219980D800DB1877 /* FMTokenizers.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA66A2B19C0CB1900EFDAC1 /* FMTokenizers.m */; };
+		74F1E39B219980DB00DB1877 /* fts3_tokenizer.h in Headers */ = {isa = PBXBuildFile; fileRef = CCA66A2C19C0CB1900EFDAC1 /* fts3_tokenizer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		74F1E39C219980DC00DB1877 /* fts3_tokenizer.h in Headers */ = {isa = PBXBuildFile; fileRef = CCA66A2C19C0CB1900EFDAC1 /* fts3_tokenizer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8314AF3318CD73D600EC0E25 /* FMDB.h in Headers */ = {isa = PBXBuildFile; fileRef = 8314AF3218CD73D600EC0E25 /* FMDB.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		83C73F131C326B9400FFC730 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC24EBB0A13E34D00A6D3E3 /* FMDatabase.m */; };
 		83C73F141C326B9400FFC730 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC24EC00A13E34D00A6D3E3 /* FMResultSet.m */; };
@@ -144,9 +160,10 @@
 		4C740715215083C40003C17E /* FMDBTempDBTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMDBTempDBTests.h; sourceTree = "<group>"; };
 		4C740716215083C40003C17E /* FMDatabaseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseTests.m; sourceTree = "<group>"; };
 		4C740719215084250003C17E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		6290CBB5188FE836009790F8 /* libFMDB-IOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libFMDB-IOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6290CBB5188FE836009790F8 /* libFMDB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFMDB.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6290CBB6188FE836009790F8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6290CBC6188FE837009790F8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		7487739A2199E4CD00AC47FE /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		8314AF3218CD73D600EC0E25 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDB.h; path = src/fmdb/FMDB.h; sourceTree = "<group>"; };
 		831DE6FD175B7C9C001F7317 /* README.markdown */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
 		83C73EFE1C326AB000FFC730 /* FMDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FMDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -287,7 +304,7 @@
 				8DD76FA10486AA7600D96B5E /* fmdb */,
 				EE4290EF12B42F870088BD94 /* libFMDB.a */,
 				BF5D041618416BB2008C5AA9 /* Tests.xctest */,
-				6290CBB5188FE836009790F8 /* libFMDB-IOS.a */,
+				6290CBB5188FE836009790F8 /* libFMDB.a */,
 				83C73EFE1C326AB000FFC730 /* FMDB.framework */,
 				83C73F0B1C326ADA00FFC730 /* FMDB.framework */,
 				2CD2426D1FCC09CA00479FDE /* FMDB.framework */,
@@ -349,6 +366,7 @@
 				CC9E4EB713B31188005F9210 /* FMDatabasePool.h */,
 				CC9E4EB813B31188005F9210 /* FMDatabasePool.m */,
 				83C73F311C326FA600FFC730 /* Info.plist */,
+				7487739A2199E4CD00AC47FE /* module.modulemap */,
 			);
 			name = fmdb;
 			sourceTree = "<group>";
@@ -424,12 +442,17 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74F1E39B219980DB00DB1877 /* fts3_tokenizer.h in Headers */,
 				40A146001BE575D000E5D35E /* FMDatabase.h in Headers */,
 				40A146011BE575D600E5D35E /* FMResultSet.h in Headers */,
+				74F1E394219980C300DB1877 /* FMDatabase+FTS3.h in Headers */,
+				74F1E398219980D000DB1877 /* FMTokenizers.h in Headers */,
 				40A146041BE575EB00E5D35E /* FMDatabasePool.h in Headers */,
 				40A146051BE6999800E5D35E /* FMDB.h in Headers */,
 				40A146031BE575E400E5D35E /* FMDatabaseAdditions.h in Headers */,
 				40A146021BE575DD00E5D35E /* FMDatabaseQueue.h in Headers */,
+				74F1E390219980B700DB1877 /* FMDatabase+InMemoryOnDiskIO.h in Headers */,
+				7487739C2199E58900AC47FE /* module.modulemap in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,12 +486,17 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74F1E39C219980DC00DB1877 /* fts3_tokenizer.h in Headers */,
 				EE42910612B42FC30088BD94 /* FMDatabaseAdditions.h in Headers */,
 				EE42910912B42FD00088BD94 /* FMResultSet.h in Headers */,
+				74F1E393219980C300DB1877 /* FMDatabase+FTS3.h in Headers */,
+				74F1E397219980D000DB1877 /* FMTokenizers.h in Headers */,
 				40A145FE1BE5759400E5D35E /* FMDatabase.h in Headers */,
 				8314AF3318CD73D600EC0E25 /* FMDB.h in Headers */,
 				CC9E4EBA13B31188005F9210 /* FMDatabasePool.h in Headers */,
 				CC47A00F148581E9002CCDAB /* FMDatabaseQueue.h in Headers */,
+				74F1E38F219980B600DB1877 /* FMDatabase+InMemoryOnDiskIO.h in Headers */,
+				7487739B2199E57700AC47FE /* module.modulemap in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,7 +536,7 @@
 			);
 			name = "FMDB-IOS";
 			productName = "FMDB-IOS";
-			productReference = 6290CBB5188FE836009790F8 /* libFMDB-IOS.a */;
+			productReference = 6290CBB5188FE836009790F8 /* libFMDB.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		83C73EFD1C326AB000FFC730 /* FMDB iOS */ = {
@@ -697,9 +725,12 @@
 			files = (
 				621721B31892BFE30006691F /* FMResultSet.m in Sources */,
 				621721B21892BFE30006691F /* FMDatabase.m in Sources */,
+				74F1E39A219980D800DB1877 /* FMTokenizers.m in Sources */,
 				621721B61892BFE30006691F /* FMDatabasePool.m in Sources */,
 				621721B41892BFE30006691F /* FMDatabaseQueue.m in Sources */,
 				621721B51892BFE30006691F /* FMDatabaseAdditions.m in Sources */,
+				74F1E396219980CB00DB1877 /* FMDatabase+FTS3.m in Sources */,
+				74F1E392219980BF00DB1877 /* FMDatabase+InMemoryOnDiskIO.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -767,9 +798,12 @@
 			files = (
 				EE42910812B42FCC0088BD94 /* FMDatabase.m in Sources */,
 				EE42910512B42FBC0088BD94 /* FMDatabaseAdditions.m in Sources */,
+				74F1E399219980D700DB1877 /* FMTokenizers.m in Sources */,
 				EE42910A12B42FD20088BD94 /* FMResultSet.m in Sources */,
 				CC9E4EBB13B31188005F9210 /* FMDatabasePool.m in Sources */,
 				CC47A011148581E9002CCDAB /* FMDatabaseQueue.m in Sources */,
+				74F1E395219980CA00DB1877 /* FMDatabase+FTS3.m in Sources */,
+				74F1E391219980BE00DB1877 /* FMDatabase+InMemoryOnDiskIO.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1026,8 +1060,8 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = include/FMDB;
+				PRODUCT_NAME = FMDB;
+				PUBLIC_HEADERS_FOLDER_PATH = /usr/local/include/FMDB;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
@@ -1054,8 +1088,8 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = include/FMDB;
+				PRODUCT_NAME = FMDB;
+				PUBLIC_HEADERS_FOLDER_PATH = /usr/local/include/FMDB;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				VALIDATE_PRODUCT = YES;
@@ -1331,7 +1365,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				PRODUCT_NAME = FMDB;
-				PUBLIC_HEADERS_FOLDER_PATH = include/FMDB;
+				PUBLIC_HEADERS_FOLDER_PATH = /usr/local/include/FMDB;
 			};
 			name = Debug;
 		};
@@ -1344,9 +1378,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEPLOYMENT_POSTPROCESSING = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				PRODUCT_NAME = FMDB;
-				PUBLIC_HEADERS_FOLDER_PATH = include/FMDB;
+				PUBLIC_HEADERS_FOLDER_PATH = /usr/local/include/FMDB;
 				ZERO_LINK = NO;
 			};
 			name = Release;
