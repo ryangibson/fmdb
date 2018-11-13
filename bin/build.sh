@@ -1,5 +1,14 @@
 #!/bin/sh
 
+PROJECT=fmdb.xcodeproj
+
+MAC_SCHEME=FMDB
+MAC_SDK=macosx10.14
+
+IOS_SCHEME=FMDB-IOS
+IOS_SDK=iphoneos12.1
+IOSSIM_SDK=iphonesimulator12.1
+
 function usage {
     echo "`basename $0` ios|iossim|macos debug|release"
     echo "$#"
@@ -12,16 +21,16 @@ fi
 
 case $1 in
     ios)
-        SDK=iphoneos12.1
-        SCHEME=FMDB-IOS
+        SDK=${IOS_SDK}
+        SCHEME=${IOS_SCHEME}
         ;;
     iossim)
-        SDK=iphonesimulator12.1
-        SCHEME=FMDB-IOS
+        SDK=${IOSSIM_SDK}
+        SCHEME=${IOS_SCHEME}
         ;;
     macos)
-        SDK=macosx10.14
-        SCHEME=FMDB
+        SDK=${MAC_SDK}
+        SCHEME=${MAC_SCHEME}
         ;;
     *)
         usage
@@ -36,9 +45,6 @@ case $2 in
         CONFIGURATION=Release
         ;;
 esac
-
-PROJECT=fmdb.xcodeproj
-
 
 CWD=`pwd`
 OUTPUT_DIR=${CWD}/output

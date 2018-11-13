@@ -1,5 +1,6 @@
 #!/bin/sh
 
+NAME=FMDB
 function usage {
     echo "`basename $0`"
     exit -1
@@ -51,27 +52,25 @@ for CONFIGURATION in ${CONFIGURATIONS}; do
     echo "--> Copy headers"
     mkdir -p "${SHARED_OUTPUT_DIR}/inc"
     exitOnFailure "Making new output includes directory"
-    cp -r "${MACOS_DIR}/usr/local/include/FMDB/" "${SHARED_OUTPUT_DIR}/inc/FMDB/"
+    cp -r "${MACOS_DIR}/usr/local/include/${NAME}/" "${SHARED_OUTPUT_DIR}/inc/${NAME}/"
     exitOnFailure "Making new output includes directory"
 
     echo "--> Create iOS fat binary"
     mkdir -p "${SHARED_OUTPUT_DIR}/lib/${CONFIGURATION}/iOS/"
     exitOnFailure "Making new output iOS ${CONFIGURATION} directory"
-    DEVICE="${IOS_DIR}/usr/local/lib/libFMDB.a"
-    SIM="${IOSSIM_DIR}/usr/local/lib/libFMDB.a"
-    lipo -create "${DEVICE}" "${SIM}" -output "${SHARED_OUTPUT_DIR}/lib/${CONFIGURATION}/iOS/libFMDB.a"
+    DEVICE="${IOS_DIR}/usr/local/lib/lib${NAME}.a"
+    SIM="${IOSSIM_DIR}/usr/local/lib/lib${NAME}.a"
+    lipo -create "${DEVICE}" "${SIM}" -output "${SHARED_OUTPUT_DIR}/lib/${CONFIGURATION}/iOS/lib${NAME}.a"
     exitOnFailure "Making iOS ${CONFIGURATION} fat binary"
     echo "--> Copy macOS binary"
     mkdir -p "${SHARED_OUTPUT_DIR}/lib/${CONFIGURATION}/macOS/"
     exitOnFailure "Making new output macOS ${CONFIGURATION} directory"
-    cp -r "${MACOS_DIR}/usr/local/lib/libFMDB.a" "${SHARED_OUTPUT_DIR}/lib/${CONFIGURATION}/macOS/libFMDB.a"
+    cp -r "${MACOS_DIR}/usr/local/lib/lib${NAME}.a" "${SHARED_OUTPUT_DIR}/lib/${CONFIGURATION}/macOS/lib${NAME}.a"
     exitOnFailure "Copying macOS ${CONFIGURATION} library"
 done
 
 DATE=`date +%Y-%m-%d_%H-%M-%S`
-tar cvf fmdb-libraries-${DATE}.tbz --bzip2 -C output shared
+tar cvf ${NAME}-libraries-${DATE}.tbz --bzip2 -C output shared
 exitOnFailure "Making archive"
-echo "==> Done fmdb-libraries-${DATE}.tbz"
-
-
+echo "==> Done ${NAME}-libraries-${DATE}.tbz"
 
