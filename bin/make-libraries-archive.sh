@@ -50,7 +50,7 @@ for CONFIGURATION in ${CONFIGURATIONS}; do
     exitOnFailure "Making new output directory"
 
     echo "--> Copy headers"
-    mkdir -p "${SHARED_OUTPUT_DIR}/inc"
+    mkdir -p "${SHARED_OUTPUT_DIR}/inc/${NAME}"
     exitOnFailure "Making new output includes directory"
     cp -r "${MACOS_DIR}/usr/local/include/${NAME}/" "${SHARED_OUTPUT_DIR}/inc/${NAME}/"
     exitOnFailure "Making new output includes directory"
